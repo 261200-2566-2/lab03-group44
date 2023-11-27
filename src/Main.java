@@ -3,11 +3,13 @@
 public class Main {
 
     static void PlayerData(String name,Charactor player){
-        System.out.println(player+" - status");
+        System.out.println("___________________________");
+        System.out.println(name+" - status");
         System.out.println("Hp : "+player.hp);
         System.out.println("Damage : "+player.damage);
         System.out.println("Defense : "+player.defense);
         System.out.println("Speed : "+player.speed);
+        System.out.println("___________________________");
     }
     public static void main(String[] args)
     {
@@ -29,7 +31,6 @@ public class Main {
         System.out.println(attackerName + " attacks " + defenderName + " and deals " + attack + " damage.");
 
     }
-
 
     static void Fight(String player1Name,String player2Name,Charactor player1, Charactor player2) {
         System.out.println(player1Name + " vs " + player2Name);

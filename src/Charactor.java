@@ -1,14 +1,14 @@
-import static java.lang.Math.pow;
+
 
 public class Charactor {
     int level;
-    double damage,defense,speed,baseSpeed,swordWeight,shieldWeight,hp;
+    double damage,defense,speed,baseSpeed,hp;
     float swordDamage,shieldDefense;
-
     Charactor(int level, int swordDamage,int shieldDefense,int baseSpeed){
         this.level = level;
         this.swordDamage = swordDamage;
         this.shieldDefense = shieldDefense;
+        this.baseSpeed = baseSpeed;
 
         hp=100+10*level;
         damage = swordDamage*(1+0.1*level);
@@ -18,7 +18,7 @@ public class Charactor {
     Charactor(int level, int swordDamage,int baseSpeed){
         this.level = level;
         this.swordDamage = swordDamage;
-        this.shieldDefense = shieldDefense;
+        this.baseSpeed = baseSpeed;
         hp=100+10*level;
         damage = swordDamage*(1+0.1*level);
         defense = shieldDefense*(1+0.05*level);
@@ -27,8 +27,7 @@ public class Charactor {
 
     Charactor(int level, int baseSpeed){
         this.level = level;
-        this.swordDamage = swordDamage;
-        this.shieldDefense = shieldDefense;
+        this.baseSpeed = baseSpeed;
         hp=100+10*level;
         damage = swordDamage*(1+0.1*level);
         defense = shieldDefense*(1+0.05*level);
